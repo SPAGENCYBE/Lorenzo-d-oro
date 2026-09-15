@@ -58,12 +58,12 @@
     .trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:34px;color:#bfae9f;font-size:.88rem}
     .trust span::before{content:"✓";color:var(--gold-2);margin-right:8px}
     .hero-visual{position:relative;min-height:660px}
-        .food-card{position:absolute;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.13);box-shadow:0 28px 75px rgba(0,0,0,.34)}
+    .food-card{position:absolute;overflow:hidden;border-radius:32px;border:1px solid rgba(255,255,255,.13);box-shadow:0 28px 75px rgba(0,0,0,.34)}
     .food-card img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
-    .food-a{right:2%;bottom:2%;width:62%;height:62%;transform:rotate(2.4deg)}
-    .food-b{left:1%;top:7%;width:45%;height:38%;transform:rotate(-6deg)}
-    .food-c{right:4%;top:4%;width:38%;height:29%;transform:rotate(5deg)}
-    .gold-seal{position:absolute;left:4%;bottom:7%;z-index:6;width:128px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:14px;background:linear-gradient(135deg,#ebc98f,#b9833d);color:#2d2017;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 16px 40px rgba(0,0,0,.25)}
+    .hero-visual .food-card img{object-position:center 24%}
+    .food-a{inset:0;width:100%;height:100%;transform:none}
+    .food-b,.food-c{display:none!important}
+    .gold-seal{position:absolute;right:18px;bottom:18px;left:auto;z-index:6;width:132px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:14px;background:linear-gradient(135deg,rgba(246,236,220,.96),rgba(201,154,85,.95));color:#2d2017;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 16px 40px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.38)}
 
     section{padding:110px 0}
     .intro{background:var(--cream)}
@@ -151,14 +151,14 @@
       .nav-links{display:none;position:absolute;top:102px;left:14px;right:14px;background:#211c19;padding:18px;border-radius:18px;flex-direction:column;align-items:stretch;box-shadow:0 20px 50px rgba(0,0,0,.28)}
       .nav-links.open{display:flex}.nav-links .btn{width:100%}.menu{display:block}
       .hero-grid,.intro-grid,.audience-panel,.story-grid{grid-template-columns:1fr}
-      .hero-grid{gap:26px}.hero-visual{min-height:510px;order:-1;margin-top:12px}.food-a{width:60%;height:58%;right:2%}.food-b{width:43%;height:34%;left:2%;top:6%}.food-c{width:34%;height:36%;right:3%;top:4%}.gold-seal{width:102px;left:4%;bottom:8%;font-size:.6rem}
+      .hero-grid{gap:26px}.hero-visual{min-height:500px;order:-1;margin-top:8px}.food-a{inset:0;width:100%;height:100%}.food-b,.food-c{display:none!important}.gold-seal{width:106px;right:14px;bottom:14px;left:auto;font-size:.6rem}
       .intro-copy{columns:1}.cards{grid-template-columns:repeat(2,1fr)}.gallery-head{grid-template-columns:1fr;gap:18px;align-items:start}.gallery-head p{justify-self:start}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gallery-item{height:auto;aspect-ratio:1/1}.process-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.flavours-head{align-items:start;flex-direction:column}
       .story-image{min-height:500px}.cta-box{padding:42px;display:block}.cta-actions{margin-top:26px}
       section{padding:82px 0}
     }
     @media(max-width:600px){
       h1{font-size:clamp(2.9rem,15vw,4.4rem)}h2{font-size:2.65rem}
-      .hero{min-height:auto}.hero-grid{padding:142px 0 78px}.hero-visual{min-height:0;margin-top:4px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 145px;gap:10px}.hero-visual .food-card{position:relative;inset:auto;width:auto;height:auto;transform:none;border-radius:20px}.food-a{grid-column:1 / -1;grid-row:1}.food-b{display:block;grid-column:1;grid-row:2}.food-c{display:block;grid-column:2;grid-row:2}.gold-seal{left:auto;right:10px;bottom:10px;width:70px;padding:8px;font-size:.5rem}
+      .hero{min-height:auto}.hero-grid{padding:126px 0 78px}.hero-visual{position:relative;min-height:0;margin-top:0;display:block;aspect-ratio:1/1.02}.hero-visual .food-card{position:absolute;inset:0;width:100%;height:100%;transform:none;border-radius:22px}.hero-visual .food-card img{object-position:center 16%}.food-a{grid-column:auto;grid-row:auto}.food-b,.food-c{display:none!important}.gold-seal{left:auto;right:10px;bottom:10px;width:78px;padding:8px;font-size:.5rem}
       .hero-copy>p{margin:18px 0 25px}.trust{gap:10px 18px}.cards{grid-template-columns:1fr}.card-media{height:230px}
       .audience-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}.audience-tabs .tab{width:100%}.audience-tabs .tab:last-child{grid-column:1 / -1}
       .audience-copy,.calculator{padding:24px}.calc-grid{grid-template-columns:1fr}.gallery-head{display:block;margin-bottom:24px}.gallery-head p{margin-top:16px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-grid>.gallery-item{display:block!important;height:auto;aspect-ratio:1/1;border-radius:16px}.story-image{min-height:390px}.story-points{grid-template-columns:1fr}
@@ -193,9 +193,7 @@
           <div class="trust"><span>±125 g per cup</span><span>Mix van smaken mogelijk</span><span>Direct klaar om te serveren</span></div>
         </div>
         <div class="hero-visual" aria-label="Lorenzo D'Oro tiramisu">
-                    <div class="food-card food-a"><img src="assets/photos/assortiment-collage.png" alt="Lorenzo D'Oro assortiment tiramisu cups" /></div>
-          <div class="food-card food-b"><img src="assets/photos/assortiment-grid.png" alt="Lorenzo D'Oro assortiment van smaken" /></div>
-          <div class="food-card food-c"><img src="assets/photos/dubai-new.png" alt="Dubai tiramisu cups" /></div>
+          <div class="food-card food-a"><img src="assets/photos/assortiment-grid.png" alt="Lorenzo D'Oro assortiment met zes verschillende smaken" /></div>
           <div class="gold-seal">Vers bereid<br>Premium<br>kwaliteit</div>
         </div>
       </div>
